@@ -37,3 +37,793 @@ wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
 class CfgRemoteExecCommands {};
+
+class Params
+{
+	class CVG_Gamemode0
+	{
+		title="Game Type";
+		values[]={0};
+		texts[]={"Normal"};
+		default=0;
+	};
+	class CVG_Environment1
+	{
+		title="::	Environmental Options:";
+		values[]={4};
+		texts[]={""};
+	};
+	class CVG_timeOfDay2
+	{
+		title="				Start time:";
+		values[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,99};
+		texts[]={"0100 Hours","0200 Hours","0300 Hours","0400 Hours","0500 Hours","0600 Hours","0700 Hours","0800 Hours","0900 Hours","1000 Hours","1100 Hours","1200 Hours","1300 Hours","1400 Hours","1500 Hours","1600 Hours","1700 Hours","1800 Hours","1900 Hours","2000 Hours","2100 Hours","2200 Hours","2300 Hours","2400 Hours","Random"};
+		default=19;
+	};
+	class CVG_fastTime3
+	{
+		title="				Speed up time:";
+		values[]={0,1};
+		texts[]={"No","Yes"};
+		default=0;
+	};
+	class CVG_weather4
+	{
+		title="				Weather:";
+		values[]={1,2,3,4,99};
+		texts[]={"Clear","Overcast w/wintry mix","In between","Foggy and Overcast","Completely Random"};
+		default=99;
+	};
+	class CVG_Fog5
+	{
+		title="				Volumetric Fog:";
+		values[]={1,0};
+		texts[]={"Yes","No"};
+		default=0;
+	};
+	class CVG_View_Dist6
+	{
+		title="				View Distance:";
+		values[]={100,200,300,400,600,1000,1500,2000,2500,3000,5000,10000};
+		texts[]={"100m","200m","300m","400m","600m","1000m","1500m","2000m","2500m","3000m","5000m","10,000m"};
+		default=400;
+	};
+	class CLY_terraingrid7
+	{
+		title="				Terrain detail:";
+		values[]={0,50,25};
+		texts[]={"Individual choice","Very low (no grass)","Low (default)"};
+		default=0;
+	};
+	class CVG_CityDestruction8
+	{
+		title="				Building destruction:";
+		values[]={1,2};
+		texts[]={"No","YES"};
+		default=1;
+	};
+	class CVG_Gameplay9
+	{
+		title="::	Gameplay Options:";
+		values[]={4};
+		texts[]={""};
+	};
+	class CVG_bandages10
+	{
+		title="				Bandage Count:";
+		values[]={0,1,2,3,4,5,6,7,10};
+		texts[]={"0","1", "2","3","4","5","6","7","10"};
+		default=2;
+	};
+	class CVG_playerStart11
+	{
+		title="				Player start area:";
+		values[]={50,100,150,200,250};
+		texts[]={"At a random, town", "Randomly around map","With other players","In a building","In a building with other players"};
+		default=200;
+	};
+	class CVG_playerWeapons12
+	{
+		title="				Start with weapons:";
+		values[]={1,2,99};
+		texts[]={"Yes", "No","Random"};
+		default=1;
+	};
+	class CVG_playerItems13
+	{
+		title="				Start with map:";
+		values[]={1,2,99};
+		texts[]={"Yes", "No","Random"};
+		default=1;
+	};
+	class CLY_friendlyfire14
+	{
+		title="				Friendly fire damage:";
+		values[]={1,2,0};
+		texts[]={"Full","Reduced","Off"};
+		default=2;
+	};
+	class CVG_Fuel15
+	{
+		title="				Destroy Fuel Stations:";
+		values[]={0,1,99};
+		texts[]={"No","Yes","Random"};
+		default=0;
+	};
+	class CVG_tasks16
+	{		
+	
+		title="				Task types:";
+		values[]={0};
+		texts[]={"Tasks Disabled"};
+		default=0;
+	};
+	class CVG_Taskoptions17
+	{
+		title="				Show task location";
+		values[]={0,1};
+		texts[]={"No (A lot harder)","Yes (for a quick game. You know right where to go)"};
+		default=1;
+	};
+	class CVG_Zombie18
+	{
+		title="::	Zombie Behavior Options:";
+		values[]={4};
+		texts[]={""};
+	};
+	class CVG_Zombietowns19
+	{
+		title="				Zombie spawn area:";
+		values[]={1,2,3,4};
+		texts[]={"Towns","Everywhere","Everywhere, More in towns","In groups, around nearby buildings"};
+		default=2;
+	};
+	class CVG_Zdensity20
+	{
+		title="				Zombies per KM:";
+		values[]={10,20,30,40,50,60,70,100,99};
+		texts[]={"10", "20","30","40","50","60","70","100","Random"};
+		default=20;
+	};
+	class CVG_Horde21
+	{
+		title="				Always Aggro'd Zombies";
+		values[]={false,true};
+		texts[]={"Off", "On"};
+		default=false;
+	};
+	class CVG_maxaggrodist22
+	{
+		title="				Maximum Agro radius:";
+		values[]={100,200,300,400,500,600,700,1000,99};
+		texts[]={"100 Meters", "200 Meters","300 Meters","400 Meters","500 Meters","600 Meters","700 Meters","1000 Meters","Random"};
+		default=500;
+	};
+	class CVG_MINSPAWNDIST23
+	{
+		title="				Minimum spawn dist:";
+		values[]={5,10,25,50,75,100,150,200,300,400,99};
+		texts[]={"5 Meters", "10 Meters","25 Meters","50 Meters","75 Meters","100 Meters","150 Meters","200 Meters","300 Meters","400 Meters","Random"};
+		default=100;
+	};
+	class CVG_Resources24
+	{
+		title="::	Vehicle and Weapon Options:";
+		values[]={4};
+		texts[]={""};
+	};
+	class CVG_weapontype25
+	{
+		title="				Findable weapon types:";
+		values[]={1,2,3,4,5,6,8,99};
+		texts[]={"All Weapons (And I mean Every Weapon)","Local Weapons","BLUFOR Weapons","OPFOR Weapons","Pistols","All Weapons, based on type","Weapons from mods only","Random"};
+		default=1;
+	};
+	class CVG_Weaponcount26
+	{
+		title="				Amount of Weapons (affects vehicle weapons and sidemissions):";
+		values[]={20,50,75,101,99};
+		texts[]={"Very Few","Medium","Plenty","Every Vehicle","Random"};
+		default=50;
+	};
+	class CVG_Caches27
+	{
+		title="				Small Ammo Caches in Towns:";
+		values[]={0,1};
+		texts[]={"Disabled","Enabled"};
+		default=1;
+	};			
+	class CVG_vehiclestype28
+	{	
+		title="				Vehicle Spawn Types:";
+		values[]={0,1,2,3,4,5};
+		texts[]={"Based on surroundings (All)","All Civilian","Trucks","Military","All","Vehicles from mods only"};
+		default=0;
+	};
+	class CVG_vehicleamount29
+	{
+		title="				Vehicle Spawn Amount:";
+		values[]={0,1,5,10,20,40,60,99};
+		texts[]={"None (Are you man enough?)","Almost none","Tiny","Small","Medium","Large","Insane","Random"};
+		default=10;
+	};
+	class CVG_Vehicleinfo30
+	{
+		title="				Vehicle Status (options represent best possible condition):";
+		values[]={1,2,3,99};
+		texts[]={"Very Good","Okay","Bad","Random"};
+		default=4;
+	};
+	class CVG_Debug31
+	{
+		title="::	Debug Options:";
+		values[]={4};
+		texts[]={""};
+	};
+	class CVG_Debug32
+	{
+		title="				Debug mode:";
+		values[]={false,true};
+		texts[]={"Off", "On"};
+		default=false;
+	};
+};
+
+class CfgHints
+{
+	class user
+	{
+		class usermade
+		{
+		arguments[] = {};
+		description = "%1";
+		displayName = "Info";
+		};
+	};
+};
+
+class CfgSounds
+{
+    class attack1
+    {
+        name="attack1";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack1.ogg,1,1};
+        titles[]={};
+    };
+    class attack2
+    {
+        name="attack2";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack2.ogg,1,1};
+        titles[]={};
+    };
+    class attack3
+    {
+        name="attack3";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack3.ogg,1,1};
+        titles[]={};
+    };
+    class attack4
+    {
+        name="attack4";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack4.ogg,1,1};
+        titles[]={};
+    };
+        class attack5
+    {
+        name="attack5";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack5.ogg,.5,1};
+        titles[]={};
+    };
+        class attack6
+    {
+        name="attack6";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack6.ogg,.5,1};
+        titles[]={};
+    };
+        class attack7
+    {
+        name="attack7";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack7.ogg,.5,1};
+        titles[]={};
+    };
+        class attack8
+    {
+        name="attack8";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack8.ogg,.5,1};
+        titles[]={};
+    };
+        class attack9
+    {
+        name="attack9";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack9.ogg,.5,1};
+        titles[]={};
+    };
+        class attack10
+    {
+        name="attack10";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack10.ogg,.5,1};
+        titles[]={};
+    };
+        class attack11
+    {
+        name="attack12";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack13.ogg,.5,1};
+        titles[]={};
+    };
+        class attack12
+    {
+        name="attack12";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\attack12.ogg,.5,1};
+        titles[]={};
+    };
+    
+    class chase1
+    {
+        name="chase1";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase1.ogg,1,1};
+        titles[]={};
+    };
+    class chase2
+    {
+        name="chase2";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase2.ogg,1,1};
+        titles[]={};
+    };
+    class chase3
+    {
+        name="chase3";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase3.ogg,1,1};
+        titles[]={};
+    };
+    class chase4
+    {
+        name="chase4";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase4.ogg,1,1};
+        titles[]={};
+    };
+    class chase5
+    {
+        name="chase5";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase5.ogg,1,1};
+        titles[]={};
+    };
+    class chase6
+    {
+        name="chase6";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase6.ogg,1,1};
+        titles[]={};
+    };
+    class chase7
+    {
+        name="chase7";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase7.ogg,1,1};
+        titles[]={};
+    };
+    class chase8
+    {
+        name="chase8";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase8.ogg,1,1};
+        titles[]={};
+    };
+    class chase9
+    {
+        name="chase9";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase9.ogg,1,1};
+        titles[]={};
+    };
+    class chase10
+    {
+        name="chase10";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase10.ogg,1,1};
+        titles[]={};
+    };
+    class chase11
+    {
+        name="chase11";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase11.ogg,1,1};
+        titles[]={};
+    };
+        class chase12
+    {
+        name="chase12";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase12.ogg,1,1};
+        titles[]={};
+    };
+        class chase13
+    {
+        name="chase13";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase13.ogg,.5,1};
+        titles[]={};
+    };
+        class chase14
+    {
+        name="chase14";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase14.ogg,.5,1};
+        titles[]={};
+    };
+        class chase15
+    {
+        name="chase15";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase15.ogg,.5,1};
+        titles[]={};
+    };
+        class chase16
+    {
+        name="chase16";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase16.ogg,.5,1};
+        titles[]={};
+    };
+        class chase17
+    {
+        name="chase17";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase17.ogg,.5,1};
+        titles[]={};
+    };
+        class chase18
+    {
+        name="chase18";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase18.ogg,.5,1};
+        titles[]={};
+    };
+        class chase19
+    {
+        name="chase19";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase19.ogg,.5,1};
+        titles[]={};
+    };
+        class chase20
+    {
+        name="chase20";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase20.ogg,.5,1};
+        titles[]={};
+    };   
+     class chase21
+    {
+        name="chase21";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase21.ogg,.5,1};
+        titles[]={};
+    };
+        class chase22
+    {
+        name="chase22";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase22.ogg,.5,1};
+        titles[]={};
+    };
+        class chase23
+    {
+        name="chase23";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\chase23.ogg,.5,1};
+        titles[]={};
+    };
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    class die1
+    {
+        name="die1";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\die1.ogg,1,1};
+        titles[]={};
+    };
+    class die2
+    {
+        name="die2";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\die2.ogg,1,1};
+        titles[]={};
+    };
+    class die3
+    {
+        name="die3";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\die3.ogg,1,1};
+        titles[]={};
+    };
+    class idle2
+    {
+        name="idle2";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle2.ogg,1,1};
+        titles[]={};
+    };
+    class idle3
+    {
+        name="idle3";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle3.ogg,1,1};
+        titles[]={};
+    };
+    class idle4
+    {
+        name="idle4";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle4.ogg,1,1};
+        titles[]={};
+    };
+    class idle5
+    {
+        name="idle5";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle5.ogg,1,1};
+        titles[]={};
+    };
+    class idle6
+    {
+        name="idle6";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle6.ogg,1,1};
+        titles[]={};
+    };
+    class idle7
+    {
+        name="idle7";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle7.ogg,1,1};
+        titles[]={};
+    };
+    class idle8
+    {
+        name="idle8";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\idle8.ogg,1,1};
+        titles[]={};
+    };
+    class scream1
+    {
+        name="scream1";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\scream1.ogg,1,1};
+        titles[]={};
+    };
+    class scream2
+    {
+        name="scream2";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\scream2.ogg,1,1};
+        titles[]={};
+    };
+    class scream3
+    {
+        name="scream3";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\scream3.ogg,1,1};
+        titles[]={};
+    };
+    class dash
+    {
+        name="dash";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\dash.ogg,0.02,1.2};
+        titles[]={};
+    };
+    class dot
+    {
+        name="dot";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\dot.ogg,0.02,1.2};
+        titles[]={};
+    };
+    class sirens
+    {
+        name="sirens";
+        sound[]={\impact_code\MPScenarios\Impact.Altis\sound\sirens.ogg,1,1};
+        titles[]={};
+    };
+	class roundintro
+	{
+		name="roundintro";
+		sound[]={\impact_code\MPScenarios\Impact.Altis\sound\roundintro.ogg,1,1};
+		titles[]={};
+	};
+	class roundend
+	{
+		name="roundend";
+		sound[]={\impact_code\MPScenarios\Impact.Altis\sound\roundend.ogg,1,1};
+		titles[]={};
+	};
+	class mysteryBox
+	{
+		name="mysteryBox";
+		sound[]={\impact_code\MPScenarios\Impact.Altis\sound\mysteryBox.ogg,1,1};
+		titles[]={};
+	};
+	class bandageRip
+	{
+		name="bandageRip";
+		sound[]={\impact_code\MPScenarios\Impact.Altis\sound\bandageRip.ogg,1,1};
+		titles[]={};
+	};
+	class heartBeat	
+	{
+		name="heartbeat";
+		sound[]={\impact_code\MPScenarios\Impact.Altis\sound\heartbeat.ogg,1,1};
+		titles[]={};
+	};
+
+
+};
+
+class RscTitles
+{
+    titles[]={};
+    
+    class outro
+    {
+        idd=-1;
+        movingEnable=0;
+        duration=11;
+        fadein=1;
+        fadeout=1;
+        name="outro";
+        controls[]={"title1","title3"};
+        
+        class title1
+        {
+            type=0;
+            idc=-1;
+            colorBackground[]={0,0,0,0};
+            colorText[]={0.2,0.2,0.4,1};
+            font="EtelkaMonospaceProBold";
+            size=1;
+            text="...in";
+            style=0;
+            sizeEx=0.04;
+            x=0.18;
+            y=0.33;
+            w=0.1;
+            h=0.1;
+        };
+        class title3
+        {
+            type=0;
+            idc=-1;
+            colorBackground[]={0,0,0,0};
+            colorText[]={0.2,0.2,0.4,1};
+            font="EtelkaMonospaceProBold";
+            size=1;
+            text="part three";
+            style=0;
+            sizeEx=0.04;
+            x=0.7;
+            y=0.52;
+            w=0.2;
+            h=0.1;
+        };
+    };
+    class claw1
+    {
+        idd=-1;
+        movingEnable=0;
+        duration=0;
+        fadein=0.25;
+        fadeout=0.75;
+        name="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw1";
+        controls[]={"title1"};
+        
+        class title1
+        {
+            type=0;
+            idc=-1;
+            size=1;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="EtelkaMonospaceProBold";
+            text="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw1.paa";
+            style=48;
+            sizeEx=0.15;
+            x=0.275;
+            y=0.2;
+            w=0.45;
+            h=0.6;
+        };
+    };
+    class claw2
+    {
+        idd=-1;
+        movingEnable=0;
+        duration=0;
+        fadein=0.25;
+        fadeout=0.75;
+        name="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw2";
+        controls[]={"title1"};
+        
+        class title1
+        {
+            type=0;
+            idc=-1;
+            size=1;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="EtelkaMonospaceProBold";
+            text="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw2.paa";
+            style=48;
+            sizeEx=0.15;
+            x=0.275;
+            y=0.2;
+            w=0.45;
+            h=0.6;
+        };
+    };
+    class claw3
+    {
+        idd=-1;
+        movingEnable=0;
+        duration=0;
+        fadein=0;
+        fadeout=0.2;
+        name="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw3";
+        controls[]={"title1"};
+        
+        class title1
+        {
+            type=0;
+            idc=-1;
+            size=1;
+            colorBackground[]={0,0,0,0};
+            colorText[]={1,1,1,1};
+            font="EtelkaMonospaceProBold";
+            text="impact_code\MPScenarios\Impact.Altis\zombie_scripts\claw3.paa";
+            style=48;
+            sizeEx=0.15;
+            x=0.275;
+            y=0.2;
+            w=0.45;
+            h=0.6;
+        };
+    };
+	class clawhud
+   	{
+		idd=-1;
+		movingEnable=0;
+	  	fadein=0;
+		duration=0.3;
+	  	fadeout=0.5;
+		name="clawhud";
+		onLoad="uiNamespace setVariable ['clawhud',_this select 0]";
+		controlsBackground[]={};
+		objects[]={};
+		class controls
+		{
+			class hud1
+			{
+				type=0;
+				idc=23500;
+				size=1;
+				colorBackground[]={0,0,0,0};
+				colorText[]={1,1,1,1};
+				font="EtelkaMonospaceProBold";
+				style=48;
+	  	  		sizeEx=0.15;
+				x=-1;
+	  	  		y=-1;
+				w=0.06;
+				h=0.08;
+				text="";
+			};
+		};   
+ 	};
+
+	class bandagehud
+   	{
+		idd=-1;
+		movingEnable=0;
+	  	fadein=0;
+		duration=20;
+	  	fadeout=0;
+		name="bandagehud";
+		onLoad="uiNamespace setVariable ['bandagehud',_this select 0]";
+		controlsBackground[]={};
+		objects[]={};
+		class controls
+		{
+			class hud1
+			{
+				type=0;
+				idc=23500;
+				style=0;
+				x=-1;
+				y=-1;
+				w=0.2;
+				h=0.02;
+				sizeEx=0.02;
+				size=1;
+				font="EtelkaMonospaceProBold";
+				colorBackground[]={0,0,0,0};
+				colorText[]={1,0.5,0.5,0.6};
+				shadow=true;
+				text="";
+			};
+		};   
+ 	};
+};

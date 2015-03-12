@@ -34,8 +34,26 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=6;
 		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8420,111.43423,25112.85};
+					id=0;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="Zombiespawner";
+				};
+			};
+		};
+		class Item1
 		{
 			side="CIV";
 			class Vehicles
@@ -53,7 +71,7 @@ class Mission
 				};
 			};
 		};
-		class Item1
+		class Item2
 		{
 			side="CIV";
 			class Vehicles
@@ -71,7 +89,7 @@ class Mission
 				};
 			};
 		};
-		class Item2
+		class Item3
 		{
 			side="CIV";
 			class Vehicles
@@ -89,7 +107,7 @@ class Mission
 				};
 			};
 		};
-		class Item3
+		class Item4
 		{
 			side="CIV";
 			class Vehicles
@@ -107,7 +125,7 @@ class Mission
 				};
 			};
 		};
-		class Item4
+		class Item5
 		{
 			side="CIV";
 			class Vehicles

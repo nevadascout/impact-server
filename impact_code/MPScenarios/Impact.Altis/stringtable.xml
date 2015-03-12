@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Project name="Battle Games">
+	<Package name="Bandaging">
+		<Key ID="STR_DZS_Bandagewounds">
+			<Original>Bandage Wounds</Original>
+			<English>Bandage Wounds</English>
+			<Russian></Russian>
+		</Key>Cancel bandaging
+		<Key ID="STR_DZS_cancelBandaging">
+			<Original>Cancel Bandaging</Original>
+			<English>Cancel Bandaging</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_beingBandaged">
+			<Original>is bandaging you</Original>
+			<English>is bandaging you</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_receiveBandage">
+			<Original>Received bandage from</Original>
+			<English>Received bandage from</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_gaveBandage">
+			<Original>Bandage given to</Original>
+			<English>Bandage given to</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_giveBandage">
+			<Original>Give bandage to</Original>
+			<English>Give bandage to</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_takeBandage">
+			<Original>Take bandage</Original>
+			<English>Take Bandage</English>
+			<Russian></Russian>
+		</Key>
+		<Key ID="STR_DZS_verbBandage">
+			<Original>Bandage</Original>
+			<English>Bandage</English>
+			<Russian></Russian>
+		</Key>
+	</Package>

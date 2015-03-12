@@ -1,0 +1,24 @@
+
+DZS_fm_buildingPart = {
+	_section = ["side","corner"];
+	_section = _section call BIS_fnc_selectRandom;
+	_sides = ["north","south","east","west"];
+	_corners = ["northeast","northwest","southeast","southwest"];
+	switch {_section} do {
+		case "side": 
+		{
+			_message =  (_sides call BIS_fnc_selectRandom)+ _section;
+		};
+		case "corner:
+		{	
+			_message = (_corners call BIS_fnc_selectRandom) + _section;
+		}:
+	}; 
+	_message
+};
+
+["A fire started on the " , ["Burn damage is visible on the ","Fire damage is visible on the ","Scorching is visible on the ","Charring is visible on the "],["There is a charred section of the ","There is a burned section of the ","There is a scorched section of the ","There is a blackened section of the ","There is an incinerated section of the "],[["It's crispy on the ","It's burned on the ","It's scorched on the "],["It has been burned on the ","It has been scorched on the "]]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Tasks
+
